@@ -1,4 +1,4 @@
-var items = [
+var itemList = [
     {
         name: '鉛筆',
         price: 300,
@@ -19,7 +19,7 @@ var items = [
 var vm = new Vue({
     el: '#app',
     data: {
-        items: items
+        items: itemList
     },
     filters: {
         numberWithDelimiter: function (value) {
@@ -40,6 +40,12 @@ var vm = new Vue({
         },
         canBuy: function() {
             return 1000 <= this.totalPrice 
+        },
+        errorMessageStyle: function() {
+            return {
+                border: this.canBuy ? '' : '1px solid rgb(150, 0, 0)',
+                color: this.canBuy ? '' : 'rgb(150, 0, 0)'
+            }
         }
     }
 });
