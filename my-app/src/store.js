@@ -10,9 +10,10 @@ const store = new Vuex.Store({
   },
   mutations: {
     // カウントアップするミューテーションを登録
-    increment(state) {
-      state.count++
-    }
+    // increment(state) {
+    //   state.count++
+    // }
+    increment: state => {state.count++}
   }
 })
 export default store
