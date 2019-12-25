@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import App from './App'
-import store from '@/store.js'
+import App from './App.vue'
+import store from './store.js'
 
 // storeの情報を操作できることを確認
 console.log(store.state.count)

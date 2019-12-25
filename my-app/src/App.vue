@@ -1,33 +1,24 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <HelloWorld/>
+    <p>{{message}}</p>
+    <EditForm />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import EditForm from './components/EditForm.vue'
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    HelloWorld
+    EditForm
   },
-  created() {
-    console.log(this.$store.state.count + '!!!!!')
-    this.$store.commit('increment')
-    console.log(this.$store.state.count + '!!!!!')
+  computed: {
+    // ローカルの message とストアの message を同期
+    message() {
+      return this.$store.getters.message
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
