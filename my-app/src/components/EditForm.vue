@@ -10,7 +10,8 @@
     computed: {
       message: {
         get() {
-          return this.$store.getters.message
+          // return this.$store.getters.message
+          return this.$store.getters['moduleC/message']
         },
         set(value) {
           this.$store.dispatch('doUpdate', value)

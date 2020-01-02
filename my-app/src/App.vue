@@ -20,7 +20,8 @@ export default {
   computed: {
     // ローカルの message とストアの message を同期
     message() {
-      return this.$store.getters.message
+      // return this.$store.getters.message
+      return this.$store.getters['moduleC/message']
     }
   }
 }

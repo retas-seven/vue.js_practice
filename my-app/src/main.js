@@ -3,9 +3,9 @@ import App from './App.vue'
 import store from './store.js'
 
 // storeの情報を操作できることを確認
-console.log(store.state.count)
-store.commit('increment')
-console.log(store.state.count)
+// console.log(store.state.count)
+// store.commit('increment')
+// console.log(store.state.count)
 
 Vue.config.productionTip = false
 
