@@ -14,7 +14,7 @@
           return this.$store.getters['moduleC/message']
         },
         set(value) {
-          this.$store.dispatch('doUpdate', value)
+          this.$store.dispatch('moduleC/doUpdate', value)
         }
       }
     }
